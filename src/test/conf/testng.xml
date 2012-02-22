@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="tapestry5-jquery Application Test Suite" annotations="1.5">
+   <test name="JQuery Integration Tests"  enabled="true">
+    
+        <parameter name="tapestry.web-app-folder" value="src/test/webapp"/>
+        <parameter name="tapestry.browser-start-command" value="*firefox" />
+
+        <classes>
+          <class name="org.got5.tapestry5.highcharts.test.HighchartsTest"></class>
+        </classes>
+    </test>
+  </suite>

@@ -1,0 +1,7 @@
+<html t:type="layout" t:title="Tapestry5 jqPlot" t:activeElement="0"  
+		xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+	<div t:clientId="container" t:type="jquery-highcharts/AbstractHighCharts" t:options="options"/>
+
+	<div t:clientId="container2" t:type="MyOwnChart"/>
+</html>
