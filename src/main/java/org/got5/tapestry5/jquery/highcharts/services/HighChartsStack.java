@@ -39,8 +39,6 @@ public class HighChartsStack implements JavaScriptStack{
         };
 
 
-        final Mapper<String, StylesheetLink> pathToStylesheetLink = F.combine(pathToAsset, JQueryUtils.assetToStylesheetLink);
-        
         stylesheetStack = CollectionFactory.newList();
         
         if (productionMode) {
