@@ -21,8 +21,8 @@
 		
 		<h1>Usage</h1>
 		<p>
-			This project is not yet available on the Maven Repository. But for testing it, 
-			download the project, install it, and add this dependency into your project : 
+			If you want to use this project, your just need to add 
+			this dependency and repository into your pom.xml 
 		</p>
 		<pre>
 			<code><![CDATA[
@@ -31,6 +31,12 @@
 					<artifactId>tapestry5-highcharts</artifactId>
 					<version>1.0.0-SNAPSHOT</version>
 				</dependency>
+			]]></code>
+			<code><![CDATA[
+				<repository>
+					<id>PullRequest Repository</id>
+					<url>http://nexus.pullrequest.org</url>
+				</repository>
 			]]></code>
 		</pre>
 		<p>
