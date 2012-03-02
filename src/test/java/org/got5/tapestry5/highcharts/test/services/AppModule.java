@@ -12,7 +12,7 @@ public class AppModule {
     {
        
         configuration.add(SymbolConstants.PRODUCTION_MODE, "false");
-        
+        configuration.add("demo-src-dir","D:\\Documents\\a503018\\Documents\\WEBPLATFORM_DOCUMENTATION\\TAPESTRY5-jQUERY\\tapestry5-highcharts\\src\\test\\");
     }
 	
 }

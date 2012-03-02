@@ -1,0 +1,17 @@
+<html t:type="layout" t:title="Tapestry5 jqPlot" t:activeElement="0"  
+		xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+	<h1>Demo</h1>
+	<div t:clientId="container" t:type="jquery-highcharts/AbstractHighCharts" t:options="options"/>
+	
+	<h1>Source code</h1>
+	
+	<h3>JavaScript Code</h3>
+	<div t:type="jquery/showSource" t:ext="java" t:beginLine="8" t:endLine="63" t:path="webapp/js/demo.js"></div>
+	
+	<h3>Template Code</h3>
+	<div t:type="jquery/showSource" t:ext="html" t:beginLine="5" t:endLine="5" t:path="resources/org/got5/tapestry5/highcharts/test/pages/BasicComponent.tml"></div>
+	
+	<h3>Java Code</h3>
+	<div t:type="jquery/showSource" t:ext="java" t:beginLine="9" t:endLine="30" t:path="java/org/got5/tapestry5/highcharts/test/pages/BasicComponent.java"></div>
+</html>

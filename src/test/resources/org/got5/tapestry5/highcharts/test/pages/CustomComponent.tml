@@ -1,0 +1,28 @@
+<html t:type="layout" t:title="Tapestry5 jqPlot" t:activeElement="0"  
+		xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+	<h1>Demo</h1>
+	<div t:clientId="container2" t:type="MyOwnChart"/>
+	
+	<h1>How to create your own Component ? </h1>
+	<p>
+		For creating your own HighCharts component, you just need to extend the AbstractHighCharts class, and 
+		override the getComponentOptions method, in order to define the specific JSON parameters for your 
+		component.
+	</p>
+	
+	<h1>Source code</h1>
+	
+	<h3>Your Custom Component</h3>
+	<div t:type="jquery/showSource" t:ext="java" t:beginLine="6" t:endLine="20" t:path="java/org/got5/tapestry5/highcharts/test/components/MyOwnChart.java"></div>
+	
+	<h3>JavaScript Code</h3>
+	<div t:type="jquery/showSource" t:ext="java" t:beginLine="64" t:endLine="118" t:path="webapp/js/demo.js"></div>
+	
+	<h3>Template Code</h3>
+	<div t:type="jquery/showSource" t:ext="html" t:beginLine="5" t:endLine="5" t:path="resources/org/got5/tapestry5/highcharts/test/pages/CustomComponent.tml"></div>
+	
+	<h3>Java Code</h3>
+	<div t:type="jquery/showSource" t:ext="java" t:beginLine="9" t:endLine="30" t:path="java/org/got5/tapestry5/highcharts/test/pages/CustomComponent.java"></div>
+	
+</html>

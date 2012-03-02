@@ -1,7 +1,76 @@
 <html t:type="layout" t:title="Tapestry5 jqPlot" t:activeElement="0"  
 		xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+	
+		<h1>Feature</h1>
+		<p>
+			This project makes it possible to integrate the HighCharts
+			library to a Tapestry Application. It is based to the Tapestry5-jQuery
+			project.
+		</p>
+		
+		<h1>Download</h1>
+		<p>
+			All the source code is available on Github. If you want
+			to contribute, to not hesitate to fork the project, and send
+			your pull request. We will very pround to integrate them 
+			into the project. 
+		</p>
+		<ul>
+			<li><a href="https://github.com/got5/tapestry5-highcharts">Github Project</a></li>
+		</ul>
+		
+		<h1>Usage</h1>
+		<p>
+			This project is not yet available on the Maven Repository. But for testing it, 
+			download the project, install it, and add this dependency into your project : 
+		</p>
+		<pre>
+			<code><![CDATA[
+				<dependency>
+					<groupId>org.got5</groupId>
+					<artifactId>tapestry5-highcharts</artifactId>
+					<version>1.0.0-SNAPSHOT</version>
+				</dependency>
+			]]></code>
+		</pre>
+		<p>
+			All the next components will be based on the AbstractHighCharts component. 
+			You can use it for all your charts, and define all the parameters by using 
+			the options parameters or by adding datas to the jquery object : 
+		</p>
+		<pre>
+			<code>$("#clientId").data("highcharts", {...});</code>
+		</pre>
+		<p>
+			The Java and JavaScript JSON parameter will be merged during the initialization 
+			of the HighCharts. If you set these parameters by JavaScript, you have to do it before 
+			the initialization of the HighCharts. In your Java Class, for example, you need to use 
+			this method of the JavaScriptSupport service: 
+		</p>
+		<pre>
+			<code>javascript.addInitializerCall(InitializationPriority.EARLY, "index", new JSONObject());</code>
+		</pre>
+		<p>
+			You can also create your ownHighChart component, by extending the AbstractHighCharts class 
+			and overriding the getComponentOptions() method. The returned value of this method 
+			will be merged to the options parameter.
+		</p>
+		
+		<h1>Components</h1>
+		<ul>
+			<li><a t:type="pageLink" t:page="BasicComponent">AbstractHighCharts</a> : Basic HighCharts Component</li>
+			<li><a t:type="pageLink" t:page="CustomComponent">Cutom Component</a> : How to create your own component</li>
+		</ul>
+		
+		<h1>History</h1>
+		
+		<ul>
+			<li>1.0.0-SNAPSHOT : Initial Version. Creation of the <strong>AbstractHighCharts</strong> Component</li>
+		</ul>
+		<h1>Contributors</h1>
+		
+		<ul>
+			<li>Emmanuel DEMEY</li>
+		</ul>
 
-	<div t:clientId="container" t:type="jquery-highcharts/AbstractHighCharts" t:options="options"/>
-
-	<div t:clientId="container2" t:type="MyOwnChart"/>
 </html>

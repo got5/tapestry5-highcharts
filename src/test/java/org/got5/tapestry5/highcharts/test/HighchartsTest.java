@@ -9,7 +9,7 @@ public class HighchartsTest extends SeleniumTestCase{
 	
 	@Test
 	public void testJSFile(){
-		open("/Index");
+		open("/BasicComponent");
 		
 		new Wait() {
 			
