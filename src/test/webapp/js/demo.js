@@ -1,12 +1,12 @@
 (function( $ ) {
-
-	$.extend(Tapestry.Initializer, {
-		documentation : function(){
-			$('#toc').toc();
-		},
 	
-		basicComponent : function(spec) {
-			
+	T5.extendInitializers(function(){
+		
+		function documentation(){
+			$('#toc').toc();
+		}
+		
+		function basicComponent(spec){
 			$("#container").data('highcharts', {
 				chart: {
 					renderTo: 'container',
@@ -60,8 +60,9 @@
 					data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
 				}]
 			});
-		},
-		customComponent : function(spec) {
+		}
+		
+		function customComponent(spec){
 			$("#container2").data('highcharts', {
 				chart: {
 					renderTo: 'container2',
@@ -116,6 +117,11 @@
 				}]
 			});
 		}
+		
+		return {
+			documentation : documentation, 
+			basicComponent : basicComponent, 
+			customComponent : customComponent
+		}
 	});
-	
 }) ( jQuery );
