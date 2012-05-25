@@ -23,6 +23,7 @@
 		<p>
 			If you want to use this project, your just need to add 
 			this dependency and repository into your pom.xml 
+			(Note: version 1.1.0 is for Tapestry-5.3 & 1.0.0 is for Tapestry-5.2)
 		</p>
 		<pre>
 			<code><![CDATA[
@@ -35,7 +36,7 @@
 			<code><![CDATA[
 				<repository>
 					<id>PullRequest Repository</id>
-					<url>http://nexus.pullrequest.org</url>
+					<url>http://nexus.pullrequest.org/content/repositories/releases</url>
 				</repository>
 			]]></code>
 		</pre>
