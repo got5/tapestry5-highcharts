@@ -11,7 +11,7 @@ public class AppModule {
 	public static void contributeApplicationDefaults(MappedConfiguration<String, String> configuration)
     {
        
-        configuration.add(SymbolConstants.PRODUCTION_MODE, "false");
+        configuration.add(SymbolConstants.PRODUCTION_MODE, "true");
         configuration.add("demo-src-dir","D:\\Documents\\a503018\\Documents\\WEBPLATFORM_DOCUMENTATION\\TAPESTRY5-jQUERY\\tapestry5-highcharts\\src\\test\\");
     }
 	

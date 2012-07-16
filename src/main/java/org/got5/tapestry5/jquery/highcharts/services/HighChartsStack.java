@@ -44,7 +44,7 @@ public class HighChartsStack implements JavaScriptStack{
         if (productionMode) {
         	
         	javaScriptStack = F
-                .flow("${jquery.jqplot.core.path}/highcharts.js")
+                .flow("${jquery.highcharts.core.path}/highcharts.js")
             .map(pathToAsset).toList();
 
         } else {
