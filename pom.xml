@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.got5</groupId>
 	<artifactId>tapestry5-highcharts</artifactId>
-	<version>1.2.0-SNAPSHOT</version>
+	<version>1.2.0</version>
 	<packaging>jar</packaging>
 	<name>Tapestry 5 HighCharts</name>
 
@@ -48,7 +48,7 @@
         <dependency>
 			<groupId>org.got5</groupId>
         	<artifactId>tapestry5-jquery</artifactId>
-            <version>3.2.2-SNAPSHOT</version>
+            <version>3.3.3</version>
 		</dependency>
 
 	</dependencies>
@@ -205,6 +205,6 @@
 	</distributionManagement>
 
 	<properties>
-		<tapestry-release-version>5.3.3</tapestry-release-version>
+		<tapestry-release-version>5.3.6</tapestry-release-version>
 	</properties>
 </project>
