@@ -7,9 +7,8 @@
 		}
 		
 		function basicComponent(spec){
-			$("#container").data('highcharts', {
+			$("#abstracthighcharts").data('highcharts', {
 				chart: {
-					renderTo: 'container',
 					type: 'line',
 					marginRight: 130,
 					marginBottom: 25
@@ -63,9 +62,8 @@
 		}
 		
 		function customComponent(spec){
-			$("#container2").data('highcharts', {
+			$("#myownchart").data('highcharts', {
 				chart: {
-					renderTo: 'container2',
 					type: 'line',
 					marginRight: 130,
 					marginBottom: 25

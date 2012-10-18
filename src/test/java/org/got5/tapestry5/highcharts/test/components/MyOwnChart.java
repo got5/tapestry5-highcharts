@@ -13,7 +13,7 @@ public class MyOwnChart extends AbstractHighCharts{
 		
 		JSONObject high = new JSONObject();
 		high.put("subtitle", opt);
-		
+		high.put("chart", new JSONObject("renderTo", getClientId()));
 		return high;
 		
 	}
