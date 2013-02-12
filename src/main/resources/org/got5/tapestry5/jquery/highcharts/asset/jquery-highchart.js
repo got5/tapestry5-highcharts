@@ -9,7 +9,7 @@
 				params = extra;
 			}
 			
-			$.extend(params, spec.opt);
+			$.extend(true, params, spec.opt);
 			
 			chart = new Highcharts.Chart(params);
 			
