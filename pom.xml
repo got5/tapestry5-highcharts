@@ -48,7 +48,7 @@
         <dependency>
 			<groupId>org.got5</groupId>
         	<artifactId>tapestry5-jquery</artifactId>
-            <version>3.3.7-SNAPSHOT</version>
+            <version>3.3.7</version>
 		</dependency>
 
 	</dependencies>
