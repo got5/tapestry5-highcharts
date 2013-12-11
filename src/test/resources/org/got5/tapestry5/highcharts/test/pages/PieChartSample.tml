@@ -1,0 +1,13 @@
+<html t:type="layout" t:title="Tapestry5 highcharts" t:activeElement="0"  
+		xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+		
+		
+		<div 
+			t:type="PieChart" 
+			t:clientId="myPieChart" 
+			t:mainTitle="Browser market shares at a specific website, 2014"
+			t:tooltipFormatter="function(){return '&lt;b&gt;'+ this.point.name +'&lt;/b&gt;: '+ this.percentage +' %';}"
+			t:dataSerie="series"
+		/>
+
+</html>

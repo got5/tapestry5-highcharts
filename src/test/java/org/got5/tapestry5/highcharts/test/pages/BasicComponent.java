@@ -11,6 +11,18 @@ public class BasicComponent {
 	@Inject
 	private JavaScriptSupport javascript;
 	
+	
+	
+	private JSONObject getExportOptions(){
+		
+		JSONObject opt = new JSONObject();
+		opt.put("width", 500);
+		opt.put("height", 250);
+		
+		return opt;		
+	}
+	
+	
 	public JSONObject getOptions(){
 		JSONObject opt = new JSONObject();
 		opt.put("text", "Source: WorldClimate.com");
@@ -18,6 +30,7 @@ public class BasicComponent {
 		
 		JSONObject high = new JSONObject();
 		high.put("subtitle", opt);
+		high.put("exporting", getExportOptions());
 		
 		return high;
 	}

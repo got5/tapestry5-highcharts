@@ -1,6 +1,6 @@
 package org.got5.tapestry5.jquery.highcharts.services;
 
-import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.tapestry5.Asset;
@@ -12,11 +12,10 @@ import org.apache.tapestry5.ioc.internal.util.CollectionFactory;
 import org.apache.tapestry5.services.AssetSource;
 import org.apache.tapestry5.services.javascript.JavaScriptStack;
 import org.apache.tapestry5.services.javascript.StylesheetLink;
-import org.got5.tapestry5.jquery.utils.JQueryUtils;
 
-public class HighChartsStack implements JavaScriptStack{
+public class HighChartsJqueryStack implements JavaScriptStack{
 	
-	public static final String STACK_ID = "highChartsStack";
+	public static final String STACK_ID = "highChartsJqueryStack";
 	
 	private final boolean productionMode;
 
@@ -24,7 +23,7 @@ public class HighChartsStack implements JavaScriptStack{
 
     private final List<StylesheetLink> stylesheetStack;
 
-	public HighChartsStack(@Symbol(SymbolConstants.PRODUCTION_MODE) final boolean productionMode, 
+	public HighChartsJqueryStack(@Symbol(SymbolConstants.PRODUCTION_MODE) final boolean productionMode, 
 			final AssetSource assetSource) {
 		super();
 		this.productionMode = productionMode;
@@ -40,20 +39,9 @@ public class HighChartsStack implements JavaScriptStack{
 
 
         stylesheetStack = CollectionFactory.newList();
-        
-        if (productionMode) {
-        	
-        	javaScriptStack = F
-                .flow("${jquery.highcharts.core.path}/highcharts.js")
-            .map(pathToAsset).toList();
-
-        } else {
-        	
-        	javaScriptStack = F
-                .flow( "${jquery.highcharts.core.path}/highcharts.src.js")
-            .map(pathToAsset).toList();
-
-        }
+        javaScriptStack = F
+        		.flow("${jquery.highcharts.core.path}/jquery-highcharts.js")
+        		.map(pathToAsset).toList();
 		
 	}
     
@@ -74,6 +62,8 @@ public class HighChartsStack implements JavaScriptStack{
 
     public List<String> getStacks()
     {
-        return Collections.emptyList();
+    	List<String> res= new LinkedList<String>();
+    	res.add(HighChartsMainStack.STACK_ID);
+        return res;
     }
 }

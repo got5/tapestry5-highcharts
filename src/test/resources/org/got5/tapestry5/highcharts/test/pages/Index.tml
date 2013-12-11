@@ -65,8 +65,11 @@
 		
 		<h1>Components</h1>
 		<ul>
-			<li><a t:type="pageLink" t:page="BasicComponent">AbstractHighCharts</a> : Basic HighCharts Component</li>
-			<li><a t:type="pageLink" t:page="CustomComponent">Cutom Component</a> : How to create your own component</li>
+			<li><a t:type="pageLink" t:page="BasicComponent">Basic Component With Data Initialisation</a></li>
+			<li><a t:type="pageLink" t:page="CustomComponent">Custom Component With Data Initialisation</a></li>
+			<li><a t:type="pageLink" t:page="LineChartSample">Line Chart Sample</a></li>
+			<li><a t:type="pageLink" t:page="PieChartSample">Pie Chart Sample</a></li>
+			<li><a t:type="pageLink" t:page="BarChartSample">Bar Chart Sample</a></li>	
 		</ul>
 		
 		<h1>History</h1>

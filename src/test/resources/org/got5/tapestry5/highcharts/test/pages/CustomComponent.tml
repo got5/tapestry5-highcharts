@@ -2,7 +2,7 @@
 		xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
 
 	<h1>Demo</h1>
-	<div t:clientId="container2" t:type="MyOwnChart"/>
+	<div t:id="container2" t:type="MyOwnChart"/>
 	
 	<h1>How to create your own Component ? </h1>
 	<p>

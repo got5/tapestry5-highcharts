@@ -10,8 +10,16 @@ public class HighchartsModule {
 
 	public static void contributeJavaScriptStackSource(
 			MappedConfiguration<String, JavaScriptStack> configuration) {
-		configuration.addInstance(HighChartsStack.STACK_ID,
-				HighChartsStack.class);
+		
+		configuration.addInstance(
+				HighChartsMainStack.STACK_ID,
+				HighChartsMainStack.class);
+		configuration.addInstance(
+				HighChartsJqueryStack.STACK_ID,
+				HighChartsJqueryStack.class);		
+		configuration.addInstance(
+				HighChartsExportStack.STACK_ID,
+				HighChartsExportStack.class);
 	}
 
 	public static void contributeComponentClassResolver(
