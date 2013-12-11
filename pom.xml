@@ -209,11 +209,11 @@
 	<distributionManagement>
 		<repository>
 			<id>devlab722-repo</id>
-			<url>${kazan-release-repo-url}</url>
+			<url>${kazan-public-releases-repo-url}</url>
 		</repository>
 		<snapshotRepository>
 			<id>devlab722-snapshot-repo</id>
-			<url>${kazan-snapshot-repo-url}</url>
+			<url>${kazan-public-snapshots-repo-url}</url>
 		</snapshotRepository>
 	</distributionManagement>
 	    
