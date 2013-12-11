@@ -193,16 +193,21 @@
 		</repository>
 	</repositories>
 	
-	<distributionManagement>
-		<repository>
-			<id>devlab722-repo</id>
-			<url>http://nexus.devlab722.net/nexus/content/repositories/releases</url>
-		</repository>
-		<snapshotRepository>
-			<id>devlab722-snapshot-repo</id>
-			<url>http://nexus.devlab722.net/nexus/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
+	 <profiles>
+            <profile>
+                <id>opensource</id>
+			<distributionManagement>
+			<repository>
+				<id>devlab722-repo</id>
+				<url>http://nexus.devlab722.net/nexus/content/repositories/releases</url>
+			</repository>
+			<snapshotRepository>
+				<id>devlab722-snapshot-repo</id>
+				<url>http://nexus.devlab722.net/nexus/content/repositories/snapshots</url>
+			</snapshotRepository>
+		</distributionManagement>
+	    </profile>
+	</profiles>
 
 	<properties>
 		<tapestry-release-version>5.3.7
