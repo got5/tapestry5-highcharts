@@ -194,20 +194,29 @@
 	</repositories>
 	
 	 <profiles>
-            <profile>
-                <id>opensource</id>
-			<distributionManagement>
-			<repository>
-				<id>devlab722-repo</id>
-				<url>http://nexus.devlab722.net/nexus/content/repositories/releases</url>
-			</repository>
-			<snapshotRepository>
-				<id>devlab722-snapshot-repo</id>
-				<url>http://nexus.devlab722.net/nexus/content/repositories/snapshots</url>
-			</snapshotRepository>
-		</distributionManagement>
-	    </profile>
+	    <profile>
+	    	<id>opensource</id>
+             	<activation> 
+        		<activeByDefault>true</activeByDefault> 
+      		</activation> 
+	      <properties> 
+	        <kazan-release-repo-url>http://nexus.devlab722.net/nexus/content/repositories/releases</kazan-release-repo-url>
+	        <kazan-snapshot-repo-url>http://nexus.devlab722.net/nexus/content/repositories/snapshots</kazan-snapshot-repo-url> 
+	      </properties> 
+            </profile>
 	</profiles>
+                
+	<distributionManagement>
+		<repository>
+			<id>devlab722-repo</id>
+			<url>${kazan-release-repo-url}</url>
+		</repository>
+		<snapshotRepository>
+			<id>devlab722-snapshot-repo</id>
+			<url>${kazan-snapshot-repo-url}</url>
+		</snapshotRepository>
+	</distributionManagement>
+	    
 
 	<properties>
 		<tapestry-release-version>5.3.7
