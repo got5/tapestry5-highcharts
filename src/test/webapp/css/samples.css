@@ -1,0 +1,17 @@
+
+#firstGraph,#secondGraph{
+	width: 40%;
+	height: 250px;
+	display: block;
+	float: left;
+}
+
+#myPieChart{
+	width: 60%;
+}
+
+#myBarChart{
+	width: 60%
+}
+
+

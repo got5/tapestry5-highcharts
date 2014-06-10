@@ -1,0 +1,25 @@
+<html t:type="layout" t:title="Tapestry5 highcharts" t:activeElement="0"  
+		xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+
+		
+		<div 
+			t:type="LineChart"
+			t:clientId="firstGraph"
+			t:mainTitle="Monthly average temperature"
+			t:yAxisTitle="Temperature"
+			t:xAxisCategories="categories"
+			t:toolTipFormaterFunction="function() {return '&lt;b&gt;'+ this.series.name +'&lt;/b&gt;&lt;br/&gt;'+this.x +': '+ this.y + '°';}"
+			t:series="series"
+		/>
+		
+		<div 
+			t:type="LineChart"
+			t:clientId="secondGraph"
+			t:mainTitle="Monthly average temperature"
+			t:yAxisTitle="Temperature"
+			t:xAxisCategories="categories"
+			t:toolTipFormaterFunction="function() {return '&lt;b&gt;'+ this.series.name +'&lt;/b&gt;&lt;br/&gt;'+this.x +': '+ this.y + '°';}"
+			t:series="series"
+		/>		
+
+</html>

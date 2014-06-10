@@ -1,0 +1,15 @@
+<html t:type="layout" t:title="Tapestry5 highcharts" t:activeElement="0"  
+		xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+		
+		
+		<div 
+			t:type="BarChart" 
+			t:clientId="myBarChart" 
+			t:title="Monthly Average Rainfall"
+			t:subTitle="Source: WorldClimate.com"
+			t:yAxisTitle="Rainfall (mm)"
+			t:categories="categories"
+			t:series="series"
+		/>
+
+</html>
