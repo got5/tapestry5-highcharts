@@ -1,6 +1,5 @@
 package org.got5.tapestry5.jquery.highcharts.components;
 
-import org.apache.tapestry5.BindingConstants;
 import org.apache.tapestry5.ClientElement;
 import org.apache.tapestry5.ComponentResources;
 import org.apache.tapestry5.MarkupWriter;
@@ -31,7 +30,6 @@ import org.got5.tapestry5.jquery.utils.JQueryUtils;
 @Import(stack=HighChartsStack.STACK_ID, library="classpath:org/got5/tapestry5/jquery/highcharts/asset/jquery-highchart.js")
 public class AbstractHighCharts implements ClientElement{
 	
-	@Parameter(value = "prop:componentResources.id", defaultPrefix = BindingConstants.LITERAL)
 	private String clientId;
 	
 	@Parameter
@@ -45,6 +43,7 @@ public class AbstractHighCharts implements ClientElement{
 	
 	@SetupRender
 	public void addDiv(MarkupWriter writer){
+		clientId = javascript.allocateClientId(resources);
 		writer.element("div", "id", clientId);
 	}
 	
@@ -64,7 +63,9 @@ public class AbstractHighCharts implements ClientElement{
 	}
 	
 	public JSONObject getComponentOptions(){
-		return new JSONObject();
+		JSONObject json = new JSONObject();
+		json.put("chart", new JSONObject("renderTo", getClientId()));
+		return json;
 	}
 	
 	public String getClientId() {
