@@ -2,7 +2,8 @@
 		xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
 
 	<h1>Demo</h1>
-	<div t:clientId="container" t:type="jquery-highcharts/AbstractHighCharts" t:options="options"/>
+	<div t:id="container" t:needExport="true" t:type="jquery-highcharts/AbstractHighCharts" t:options="options"/>
+	<div id="container" />
 	
 	<h1>Source code</h1>
 	

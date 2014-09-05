@@ -4,13 +4,13 @@ import org.apache.tapestry5.ClientElement;
 import org.apache.tapestry5.ComponentResources;
 import org.apache.tapestry5.MarkupWriter;
 import org.apache.tapestry5.annotations.AfterRender;
-import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.annotations.Parameter;
 import org.apache.tapestry5.annotations.SetupRender;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.json.JSONObject;
 import org.apache.tapestry5.services.javascript.JavaScriptSupport;
-import org.got5.tapestry5.jquery.highcharts.services.HighChartsStack;
+import org.got5.tapestry5.jquery.highcharts.services.HighChartsExportStack;
+import org.got5.tapestry5.jquery.highcharts.services.HighChartsJqueryStack;
 import org.got5.tapestry5.jquery.utils.JQueryUtils;
 
 /**
@@ -27,7 +27,6 @@ import org.got5.tapestry5.jquery.utils.JQueryUtils;
  * 
  * @author Emmanuel DEMEY
  */
-@Import(stack=HighChartsStack.STACK_ID, library="classpath:org/got5/tapestry5/jquery/highcharts/asset/jquery-highchart.js")
 public class AbstractHighCharts implements ClientElement{
 	
 	private String clientId;
@@ -35,17 +34,33 @@ public class AbstractHighCharts implements ClientElement{
 	@Parameter
 	private JSONObject options;
 	
+	@Parameter(value="false")
+	private boolean needExport;
+	
 	@Inject
 	private JavaScriptSupport javascript;
 	
 	@Inject
 	private ComponentResources resources;
 	
+	
+	private void importStack(){
+		
+		String stackId= (needExport? HighChartsExportStack.STACK_ID: HighChartsJqueryStack.STACK_ID);		
+		this.javascript.importStack(stackId);
+		
+	}
+	
+	
 	@SetupRender
 	public void addDiv(MarkupWriter writer){
+		
+		this.importStack();
+		
 		clientId = javascript.allocateClientId(resources);
 		writer.element("div", "id", clientId);
-	}
+	}	
+	
 	
 	@AfterRender
 	public void setJS(MarkupWriter writer){
