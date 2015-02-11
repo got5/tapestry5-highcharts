@@ -1,4 +1,20 @@
-HighCharts Component Library for Tapestry 5.3.3 and Tapestry5-jQuery 3.3.3
+HighCharts Component Library for Tapestry5
+
+
+## Features
+This module provides HighCharts Components integration for Tapestry.
+see [http://www.highcharts.com/products/highcharts](http://www.highcharts.com/products/highcharts) for more details
+
+## License
+
+This module is under [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+
+Do you want to use HighCharts for a personal or non-profit project? Then you can use it for free under the 
+[Creative Commons Attribution-NonCommercial 3.0 License](http://creativecommons.org/licenses/by-nc/3.0/). 
+Find out more about Non-commercial - Free licenses [FAQ](http://shop.highsoft.com/faq).
+
+if you are going to use HighCharts for a commercial product or in a commercial setting or if you want to have support, 
+you must purchase a license at [http://shop.highsoft.com/highcharts.html](http://shop.highsoft.com/highcharts.html)"
 
 # How to write a custom graph
 This component library only contains one basic Highcharts component. You can normally do everything with this simple component. You can also create your own HighCharts component, by extending this simple implementation. Thenonly thing important, is to override the getComponentOptions method, that will return the JSON object need for the initialization of your chart. 
