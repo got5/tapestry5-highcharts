@@ -1,5 +1,7 @@
-HighCharts Component Library for Tapestry5
+#HighCharts Component Library for Tapestry5
 
+## Changelog 
+* 1.3.0 : for Tapestry 5.3.8 Tapestry5-jQuery 3.3.9 
 
 ## Features
 This module provides HighCharts Components integration for Tapestry.
