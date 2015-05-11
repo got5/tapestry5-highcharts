@@ -31,6 +31,12 @@ public class HighchartsTest extends SeleniumTestCase{
 		waitForHighChartsScript();	
 	}
 	
+	@Test
+	public void testPieChartComponent(){
+		open("/PieChartSample");
+		waitForHighChartsScript();	
+	}
+	
 	private void waitForHighChartsScript(){
 		new Wait() {
 			
