@@ -10,20 +10,24 @@ public class HighchartsTest extends SeleniumTestCase{
 	@Test
 	public void testJSFile(){
 		open("/BasicComponent");
-		
-		new Wait() {
-			
-			@Override
-			public boolean until() {
-				return isElementPresent("//head/script[contains(@src,'highcharts.src.js')]");
-			}
-		}.wait("The HighCharts JavaScript file is missing.", 5000l);
+		waitForHighChartsScript();
 	}
 	
 	@Test
 	public void testBarCharSample(){
 		open("/BarChartSample");
+		waitForHighChartsScript();
+	}
+	
+	@Test
+	public void testBasicComponent(){
+		open("/CustomComponent");
+		waitForHighChartsScript();
 		
+		
+	}
+	
+	private void waitForHighChartsScript(){
 		new Wait() {
 			
 			@Override
