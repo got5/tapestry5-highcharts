@@ -22,9 +22,13 @@ public class HighchartsTest extends SeleniumTestCase{
 	@Test
 	public void testBasicComponent(){
 		open("/CustomComponent");
-		waitForHighChartsScript();
-		
-		
+		waitForHighChartsScript();	
+	}
+	
+	@Test
+	public void testLineChartComponent(){
+		open("/LineChartSample");
+		waitForHighChartsScript();	
 	}
 	
 	private void waitForHighChartsScript(){
