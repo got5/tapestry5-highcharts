@@ -19,4 +19,17 @@ public class HighchartsTest extends SeleniumTestCase{
 			}
 		}.wait("The HighCharts JavaScript file is missing.", 5000l);
 	}
+	
+	@Test
+	public void testBarCharSample(){
+		open("/BarChartSample");
+		
+		new Wait() {
+			
+			@Override
+			public boolean until() {
+				return isElementPresent("//head/script[contains(@src,'highcharts.src.js')]");
+			}
+		}.wait("The HighCharts JavaScript file is missing.", 5000l);
+	}
 }
