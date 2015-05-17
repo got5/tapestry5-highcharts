@@ -1,6 +1,7 @@
 #HighCharts Component Library for Tapestry5
 
 ## Changelog 
+* 1.3.1 : for Tapestry 5.3.8 Tapestry5-jQuery 3.3.10
 * 1.3.0 : for Tapestry 5.3.8 Tapestry5-jQuery 3.3.9 
 
 ## Features
