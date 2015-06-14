@@ -10,6 +10,7 @@ import org.apache.tapestry5.func.Mapper;
 import org.apache.tapestry5.ioc.annotations.Symbol;
 import org.apache.tapestry5.ioc.internal.util.CollectionFactory;
 import org.apache.tapestry5.services.AssetSource;
+import org.apache.tapestry5.services.javascript.JavaScriptAggregationStrategy;
 import org.apache.tapestry5.services.javascript.JavaScriptStack;
 import org.apache.tapestry5.services.javascript.StylesheetLink;
 
@@ -75,4 +76,14 @@ public class HighChartsMainStack implements JavaScriptStack{
     {
         return Collections.emptyList();
     }
+
+    public List<String> getModules() {
+        return Collections.emptyList();
+    }
+
+
+	public JavaScriptAggregationStrategy getJavaScriptAggregationStrategy() {
+	
+		return org.apache.tapestry5.services.javascript.JavaScriptAggregationStrategy.COMBINE_AND_MINIMIZE;
+	}
 }
