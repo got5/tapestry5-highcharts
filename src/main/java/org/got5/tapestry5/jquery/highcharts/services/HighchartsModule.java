@@ -30,13 +30,13 @@ public class HighchartsModule {
 
 	public static void contributeClasspathAssetAliasManager(
 			MappedConfiguration<String, String> configuration) {
-		configuration.add("tap-jquery-highcharts", "org/got5/tapestry5");
+		configuration.add("tap-jquery-highcharts", "META-INF/modules/highcharts");
 	}
 	
 	public static void contributeFactoryDefaults(MappedConfiguration<String, String> configuration)
     {
-       
-        configuration.add(HighChartsSymbolConstants.JQUERY_HIGHCHARTS_CORE_PATH, "classpath:org/got5/tapestry5/jquery/highcharts/asset");
+		
+        configuration.add(HighChartsSymbolConstants.JQUERY_HIGHCHARTS_CORE_PATH, "classpath:META-INF/modules/highcharts");
         
     }
 }
