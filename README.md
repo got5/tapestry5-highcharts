@@ -1,6 +1,7 @@
 #HighCharts Component Library for Tapestry5
 
 ## Changelog 
+* 1.4-beta-26 : for Tapestry 5.4-beta-26
 * 1.3.4 : for Tapestry 5.3.8 Tapestry5-jQuery 3.4.2
 * 1.3.3 : add dark-unica, grid-light, sans-signika themes 
 * 1.3.2 : #7 Use Highcharts v4.1.5 (2015-04-13) 
